@@ -53,6 +53,15 @@ public class RegistrationFormService {
         return form;
     }
 
+    public Optional<RegistrationForm> updateHealth(long formID, long healthImageID) {
+        Optional<RegistrationForm> form = repo.findById(formID);
+        form.ifPresent(f -> {
+            f.updateHealth(healthImageID);
+            repo.save(f);
+        });
+        return form;
+    }
+
     public void deleteById(Long id) {
         repo.deleteById(id);
     }

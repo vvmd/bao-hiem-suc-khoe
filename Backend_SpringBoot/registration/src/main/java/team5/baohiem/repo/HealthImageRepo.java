@@ -13,7 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import team5.baohiem.model.HealthImage;
 
-@Repository // repository: DTO object
+@Repository
 public interface HealthImageRepo extends JpaRepository<HealthImage, Long> {
     List<HealthImage> findByRegistrator(long registrator);
 

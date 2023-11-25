@@ -68,6 +68,13 @@ public class RegistrationFormController {
     }
 
     @ResponseStatus(HttpStatus.OK)
+    @PutMapping("/update-health")
+    public Optional<RegistrationForm> updateHealth(@RequestParam("formID") long formID,
+            @RequestParam("healthImageID") long healthImageID) {
+        return service.updateHealth(formID, healthImageID);
+    }
+
+    @ResponseStatus(HttpStatus.OK)
     @DeleteMapping("/{id}")
     public void deleteById(@PathVariable Long id) {
         service.deleteById(id);

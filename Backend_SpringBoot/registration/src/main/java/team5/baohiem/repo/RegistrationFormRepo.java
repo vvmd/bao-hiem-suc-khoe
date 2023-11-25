@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import team5.baohiem.model.RegistrationForm;
 
-@Repository // repository: DTO object
+@Repository
 public interface RegistrationFormRepo extends JpaRepository<RegistrationForm, Long> {
     List<RegistrationForm> findByIDCard(long IDCard);
 

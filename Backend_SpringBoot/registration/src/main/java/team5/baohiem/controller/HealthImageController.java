@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import team5.baohiem.model.HealthImage;
-import team5.baohiem.model.RegistrationForm;
 import team5.baohiem.service.HealthImageService;
 
 @RestController

@@ -28,6 +28,7 @@ public class RegistrationForm {
     private String status;
     private long approvedBy;
     private LocalDate createdAt;
+    private long healthImageID;
 
     public void create(String name,
             String birthday,
@@ -64,5 +65,9 @@ public class RegistrationForm {
         this.insuranceID = insuranceID;
         this.status = status;
         this.approvedBy = approvedBy;
+    }
+
+    public void updateHealth(long healthImageID) {
+        this.healthImageID = healthImageID;
     }
 }
