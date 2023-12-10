@@ -15,6 +15,6 @@ public interface RegistrationFormRepository extends JpaRepository<RegistrationFo
         List<RegistrationForm> findAllByIdentityCard(String identityCard);
 
         @Query(value = "SELECT REGISTRATION_FORM.* FROM REGISTRATION_FORM INNER JOIN USERS " +
-                        "ON REGISTRATION_FORMS.REGISTRATOR_ID = USERS.ID WHERE USERS.EMAIL = :email", nativeQuery = true)
+                        "ON REGISTRATION_FORM.REGISTRATOR_ID = USERS.ID WHERE USERS.EMAIL = :email", nativeQuery = true)
         List<RegistrationForm> findAllByEmail(@Param("email") String email);
 }

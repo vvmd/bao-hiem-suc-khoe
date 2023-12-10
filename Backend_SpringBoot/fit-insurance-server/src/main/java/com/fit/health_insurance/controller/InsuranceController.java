@@ -16,7 +16,7 @@ public class InsuranceController {
     private final InsuranceService service;
 
     public ResponseEntity<List<InsuranceDto>> findAll() {
-        return ResponseEntity.ok(service.finaAll());
+        return ResponseEntity.ok(service.findAll());
     }
 
 }

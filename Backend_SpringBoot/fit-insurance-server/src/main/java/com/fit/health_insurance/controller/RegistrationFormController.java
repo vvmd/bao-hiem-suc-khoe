@@ -19,11 +19,6 @@ import java.util.List;
 public class RegistrationFormController {
     private final RegistrationFormService registrationFormService;
 
-    @GetMapping("/all")
-    public ResponseEntity<List<RegistrationFormResponseDto>> getAllRegistrations() {
-        return ResponseEntity.ok(registrationFormService.findAll());
-    }
-
     @PreAuthorize("#email == authentication.principal.username")
     @GetMapping("/users/email/{email}")
     public ResponseEntity<List<RegistrationFormResponseDto>> findByEmail(@PathVariable String email) {
